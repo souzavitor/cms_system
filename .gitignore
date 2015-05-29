@@ -9,7 +9,7 @@
 Gemfile.lock
 
 # Ignore all logfiles and tempfiles.
-/log/*
+/log
 /tmp
 
 # vendors
