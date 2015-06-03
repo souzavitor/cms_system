@@ -1,0 +1,24 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: cms_system
+  password: cms_system
+  host: localhost
+
+development:
+  <<: *default
+  database: cms_system_dev
+
+staging:
+  <<: *default
+  database: cms_system_staging
+test:
+  <<: *default
+  database: cms_system_test
+
+production:
+  <<: *default
+  database: cms_system
+  username: cms_system
+  password: <%= ENV['CMS_SYSTEM_DATABASE_PASSWORD'] %>

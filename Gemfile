@@ -29,14 +29,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Use bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.4'
 
-# capistrano gems
-gem 'capistrano', '~> 3.0', group: :development
-gem 'capistrano-rvm', group: :development
-gem 'capistrano-rails', '~> 1.1.0', group: :development
-gem 'capistrano-bundler', group: :development
-
-# Use Unicorn as the app server
-# gem 'unicorn'
+group :development do
+  # capistrano gems
+  gem 'capistrano', '~> 3.0'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails', '~> 1.1.0'
+  gem 'capistrano-bundler'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
