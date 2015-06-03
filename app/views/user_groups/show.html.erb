@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @user_group.slug %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_group.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @user_group.description %>
+</p>
+
+<p>
+  <strong>St:</strong>
+  <%= @user_group.st %>
+</p>
+
+<p>
+  <strong>Has and belongs to many:</strong>
+  <%= @user_group.has_and_belongs_to_many %>
+</p>
+
+<p>
+  <strong>:</strong>
+  <%= @user_group. %>
+</p>
+
+<%= link_to 'Edit', edit_user_group_path(@user_group) %> |
+<%= link_to 'Back', user_groups_path %>

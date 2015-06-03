@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slug</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>St</th>
+      <th>Has and belongs to many</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_groups.each do |user_group| %>
+      <tr>
+        <td><%= user_group.slug %></td>
+        <td><%= user_group.name %></td>
+        <td><%= user_group.description %></td>
+        <td><%= user_group.st %></td>
+        <td><%= user_group.has_and_belongs_to_many %></td>
+        <td><%= user_group. %></td>
+        <td><%= link_to 'Show', user_group %></td>
+        <td><%= link_to 'Edit', edit_user_group_path(user_group) %></td>
+        <td><%= link_to 'Destroy', user_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User group', new_user_group_path %>
