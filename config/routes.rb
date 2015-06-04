@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  # Scaffolds
+  resources :profiles
   resources :user_groups
   resources :system_users
+
+  # static pages
+  get 'quem-somos' => 'static#about_us'
+  get 'contato' => 'static#contact'
   root "static#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

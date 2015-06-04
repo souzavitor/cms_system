@@ -1,0 +1,27 @@
+<header class="header">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "Home", {controller: "static", action: "index"}, {class: "navbar-brand"}%>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse pull-right" id="top-menu">
+        <ul class="nav navbar-nav">
+          <%= content_tag :li, class: current_page?({controller: "static", action: "about_us"}) && "active" || "" do %>
+            <%= link_to t("Quem Somos"), {controller: "static", action: "about_us"} %>
+          <% end %>
+          <%= content_tag :li, class: current_page?({controller: "static", action: "about_us"}) && "active" || "" do %>
+            <%= link_to t("Fale Conosco"), {controller: "static", action: "contact"} %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

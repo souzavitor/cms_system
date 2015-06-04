@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= @layout_title %></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    </head>
+<body>
+    <%= render "shared/header" %>
+    <%= yield %>
+    <%= render "shared/footer" %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>

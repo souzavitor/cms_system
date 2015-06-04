@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603014736) do
+ActiveRecord::Schema.define(version: 20150604172422) do
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer  "system_user_id", limit: 4
+    t.text     "about",          limit: 65535, null: false
+    t.string   "gender",         limit: 1,     null: false
+    t.date     "birthdate",                    null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "profiles", ["system_user_id"], name: "fk_rails_c643f85ff9", using: :btree
 
   create_table "system_users", force: :cascade do |t|
     t.string   "name",       limit: 70,                 null: false
@@ -43,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150603014736) do
     t.datetime "updated_at",                null: false
   end
 
+  add_foreign_key "profiles", "system_users"
   add_foreign_key "system_users_groups", "system_users"
   add_foreign_key "system_users_groups", "user_groups"
 end

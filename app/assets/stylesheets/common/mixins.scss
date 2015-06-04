@@ -1,0 +1,9 @@
+/**
+ * Arquivo com os mixins utilizados para a compilação dos SCSS
+ */
+@mixin circle($size) {
+    @include square($size);
+    -webkit-border-radius: $size / 2;;
+            border-radius: $size / 2;
+
+}

@@ -11,5 +11,13 @@
  * file per style scope.
  *
  */
+
+@import "common/variables";
+@import "common/mixins";
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "common/tags";
+@import "common/header";
+@import "common/footer";
